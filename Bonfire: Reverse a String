@@ -1,0 +1,7 @@
+//simple project to reverse any string given to the code.
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+reverseString("hello");
