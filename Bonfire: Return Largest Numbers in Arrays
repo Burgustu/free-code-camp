@@ -1,0 +1,19 @@
+//Takes a number of subarrays and returns the largest numbers in the arrays to create a SUPER ARRAY
+
+function largestOfFour(arr) {
+  var i;
+  var j;
+  var largestNumber = [0, 0, 0, 0];
+  
+  for (i = 0; i < arr.length; i++) {  //let's you cycle through the indexes of largestNumber
+    for (j = 0; j < arr.length; j++){   //needed to access individual numbers of indexes in subarrays
+        if (largestNumber[i] < arr[i][j]) {  //compares largestNumber[0] to arr[0][0], for example
+          largestNumber[i] = arr[i][j];   //gives largestNumber[i] the number for arr[i][j]. Loops again.
+        }
+      }
+  }
+  
+  return largestNumber;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
