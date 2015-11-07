@@ -1,0 +1,27 @@
+/*
+
+Two answers to this one. Easy peasy ES6 answer:
+
+function end(str, target) {
+  return str.endsWith(target)
+}
+  end("The cow jumped over the moon","moon");
+
+*/
+
+//I felt like this was kind of too easy, redid it with substr
+
+function end(str, target) {
+  var lastLetter = str.substr(-target.length);
+  var compareLetter = target;
+  
+if (lastLetter === compareLetter) {
+    return true;
+  } else {
+    return false;
+  }
+ 
+  return lastLetter;
+}
+
+end("He has to give me a new name", "e");
