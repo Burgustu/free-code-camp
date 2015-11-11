@@ -1,0 +1,20 @@
+//Takes a sentence and cuts it based on how many characters are in it.
+//Then adds ellipses to the end.
+
+function truncate(str, num) {
+ 
+  var slicedSentence;     
+  
+     if ( num >= str.length ) {
+       slicedSentence = str;
+     }
+       else if (num > 3) {
+       slicedSentence = str.slice(0, num-3) + "...";
+     } else {
+       slicedSentence = str.slice(0, num) + "...";
+     }
+
+  return slicedSentence;
+}
+
+truncate("A-tisket a-tasket A green and yellow basket", 11 );
