@@ -1,0 +1,26 @@
+/******
+Function that removes falsy values from array
+removes: false, null, 0, "", undefined, and NaN.
+*******/
+
+
+function bouncer(arr) {
+  function myBoolean(value) {
+    return Boolean(value);
+  }
+  return arr.filter(myBoolean);
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+
+
+/***************
+Bonus easy version that I accidentally found
+***************/
+
+function bouncer(arr) {
+  return arr.filter(Boolean);
+}
+
+bouncer([7, "ate", "", false, 9]);
